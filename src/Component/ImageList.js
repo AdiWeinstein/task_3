@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 
-function ImageList({imgList}) {
+function ImageList({imgList, num, setNum}) {
 
-    const [num, setNum] = useState(0)
+    
     const totalImage = imgList?.length
 
     useEffect(() => {
@@ -19,7 +19,7 @@ function ImageList({imgList}) {
   return (
     <div>
         
-      { imgList && <img  className="app-image" src={ imgList[num].largeImageURL}/>}
+      { imgList && <img className="image-container" src={ imgList[num].largeImageURL}/>}
         {/* {imgList &&
           imgList?.map((img) => (
             <img
